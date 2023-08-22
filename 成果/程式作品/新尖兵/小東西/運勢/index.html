@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Document</title>
+
+    <style>
+        body {
+            font-family: helvetica, sans-serif;
+            width: 800px;
+        }
+        label {
+            font-weight: bold;
+        }
+        div {
+            padding-bottom: 20px;
+        }
+        input[type="text"] {
+            padding: spx;
+            width: 150px;
+        }
+
+        p {
+            background: rgb(162, 48, 255);
+            color:rgb(38, 255, 136);
+            padding: 10px;
+            visibility: hidden;
+            /* 隱藏整個p */
+        }
+    </style>
+</head>
+<!-- 越靠近誰就被谁管 -->
+<body>
+  <div>
+    <label for="lucknumber">輸入今天的幸運號碼是否幸運相同?</label>
+    <input type="number" id="lucknumber">
+  </div>  
+
+  <div>
+    <button class="randomize">告訴我驚天的運勢</button>
+  </div>
+
+  <p class="story"></p>
+  <script src="main.js"></script>
+</body>
+</html>

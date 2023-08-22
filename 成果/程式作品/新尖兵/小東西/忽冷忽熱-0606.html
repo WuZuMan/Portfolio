@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h3> 結果論： </h3>
+    <p id = "Demo1"></p>
+    <button type="RB" onclick = "window.location.reload()"> 重新回答 </button>
+
+<script>
+var sayWord;
+
+function rain() {
+  var as1 = (prompt("有下雨嗎?", "y / n"));
+  if (as1 == 'n') {
+    alert("沒下雨就是好天氣");
+    tmp();
+        } else  if (as1 == "y") {
+        alert("下雨不方便");
+        sayWord = "下雨天還是坐公共運輸吧";
+        } else {
+        alert("無法判定,請重新輸入");
+        rain()
+        }
+    
+}
+
+function tmp() {
+  var as2 = (prompt("那麼氣溫多少呢?", "攝氏溫度"));
+  if (as2 >= 60 ) {
+    alert("太燙了!");
+    sayWord = "出門不出門都會死很慘";
+        } else  if (as2 >= 35) {
+        alert("氣溫35以上");
+        sayWord = "建議開小客車出門";
+        } else  if (as2 >= 25) {
+        alert("氣溫25~35");
+        sayWord = "可以騎機車出門";
+        } else if (as2 >= 10) {
+        alert("氣溫25度以下");
+        sayWord = "還算舒適,可以騎腳踏車";
+        } else if (as2 <= 9) {
+        alert("太凍了!");
+        sayWord = "你最好開始燒房子免得凍壞自己";
+        } else {
+        alert("無法判定,請重新輸入");
+        tmp()
+    }
+}
+
+rain()
+document.getElementById("Demo1").innerHTML = sayWord;
+
+</script>
+</body>
+</html>
